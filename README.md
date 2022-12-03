@@ -25,4 +25,5 @@ npm run build
 ```
 npm start
 ```
-
+# Credits:
+[meliooff](https://github.com/meliooff/Structure-Discord-Bot) for the template
