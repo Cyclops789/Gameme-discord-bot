@@ -42,10 +42,7 @@ module.exports = {
         {
             switch(server){
                 case config.servers[i][1]:
-                    console.log("server: " + server)
-                    console.log("config: " + config.servers[i][1])
                     query = `${config.apilink}${config.gamemelink}${config.playerlist}${config.servers[i][2]}?limit=10%26page=${page}`
-                    console.log(query)
                     break;
                 default:
                     continue;
