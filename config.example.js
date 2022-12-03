@@ -1,6 +1,5 @@
 module.exports = {
     botID: '',
-    prefix: 'r!',
     administrators: [
         "604034501210800128"
     ],
