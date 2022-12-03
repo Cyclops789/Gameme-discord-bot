@@ -1,0 +1,32 @@
+{
+    "name": "gameme-bot",
+    "version": "2.0.0",
+    "description": "GameME rank bot",
+    "main": "index.js",
+    "scripts": {
+        "build": "node slash.js",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "github.com/Cyclops789/gameme-bot"
+    },
+    "keywords": [
+        "slash-command-handler",
+        "gameme",
+        "gameservers"
+    ],
+    "author": "meliooff (template), Cyclops",
+    "license": "MIT",
+    "dependencies": {
+        "@discordjs/rest": "^0.2.0-canary.0",
+        "chalk": "^4.0.0",
+        "country-emoji": "^1.5.6",
+        "discord.js": "^13.5.1",
+        "dotenv": "^16.0.3",
+        "fs": "0.0.1-security",
+        "moment": "^2.24.0",
+        "node-fetch": "^2.6.7",
+        "timestamp-conv": "^3.0.0"
+    }
+}
