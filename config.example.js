@@ -5,7 +5,7 @@ module.exports = {
     ],
     embedColor: "black",
 
-    // set this to your gameme page
+    // set this to your gameme page, it shouldn't end with /
     gamemelink: "http://wafgamers.gameme.com",
 
     //(required) it convert xml to json, credit: "https://github.com/factmaven/xml-to-json" , you can use "https://api.factmaven.com/xml-to-json/?xml=" as well
