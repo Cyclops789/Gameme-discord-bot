@@ -42,7 +42,7 @@ module.exports = {
         {
             switch (server){
                 case config.servers[i][1]:
-                    query = `${config.apilink}${config.gamemelink}${config.playerinfo}${config.servers[i][2]}/${steamid}`
+                    query = `${config.apilink}${config.gamemelink}${config.playerinfo}${config.servers[i][4]}${config.servers[i][2]}/${steamid}`
                     break;
                 default:
                     continue;
@@ -107,7 +107,7 @@ module.exports = {
                     player_cc_emoji = ":flag_gb:"
                     break;
                 default:
-                    player_cc_emoji = flag(playerlist.player[i].cc)
+                    player_cc_emoji = flag(player.cc)
                     break;
             }
 
