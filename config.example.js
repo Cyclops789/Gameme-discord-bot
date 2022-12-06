@@ -18,16 +18,15 @@ module.exports = {
     apilink: "http://api.wafgamers.fun/xml/?xml=",
 
     // api paths, dont change anything here!!
-    playerinfo: "/api/playerinfo/css",
+    playerinfo: "/api/playerinfo/",
     serverlist: "/api/serverlist/address/",
     serverinfo: "/api/serverinfo/",
-    playerslist: "/api/playerlist/css",
-    serverinfo: "/api/serverinfo/",
+    playerlist: "/api/playerlist/",
 
-    // format: ["ServerName", "symbol" (!!!!it should be lowercase!!!!), id (it should be an integer, you can get it from your server link, ex: https://wafgamers.gameme.com/css11 , the value here is 11), "ip:port"]
+    // format: ["ServerName", "symbol" (!!!!it should be lowercase!!!!), id (it should be an integer, you can get it from your server link, ex: https://wafgamers.gameme.com/css11 , the value here is 11), "ip:port", "type" (css, csgo, tf2 ... etc)]
     // here is some examples
     servers: [
-        ["Zombie Revival", "zr", 2, "54.36.126.223:27015"],
-        ["Deathmatch", "dm", 3, "54.36.126.223:27019"],
+        ["Zombie Revival", "zr", 2, "54.36.126.223:27015", "css"],
+        ["Deathmatch", "dm", 3, "54.36.126.223:27019", "css"],
     ] 
 };
