@@ -42,7 +42,7 @@ module.exports = {
         {
             switch(server){
                 case config.servers[i][1]:
-                    query = `${config.apilink}${config.gamemelink}${config.playerlist}${config.servers[i][2]}?limit=10%26page=${page}`
+                    query = `${config.apilink}${config.gamemelink}${config.playerlist}${config.servers[i][4]}${config.servers[i][2]}?limit=10%26page=${page}`
                     break;
                 default:
                     continue;
@@ -71,12 +71,12 @@ module.exports = {
                 const player_steamid    = playerlist.player[i].uniqueid
                 const player_cc         = playerlist.player[i].cc
                 const count             = i+1
+                
                 let player_cc_emoji;
-
                 if(player_cc == "uk"){
                     player_cc_emoji = ":flag_gb:"
                 } else {
-                    player_cc_emoji = flag(playerlist.player[i].cc)
+                    player_cc_emoji = flag(player_cc)
                 }
                 if(i <= 9) {
                     embed.addFields({ name: `${count} - ${player_cc_emoji} ${player_name} (${player_steamid})`, value: `Points: ${player_skill}`})
