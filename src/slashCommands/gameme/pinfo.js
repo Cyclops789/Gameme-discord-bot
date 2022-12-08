@@ -3,6 +3,7 @@ const Converter = require('timestamp-conv');
 const { flag } = require('country-emoji');
 const config = require("../../../config");
 const Discord = require('discord.js');
+const logger = require("../../utils/logger");
 const ServersList = [];
 
 for(let i = 0; i < config.servers.length; i++)
@@ -134,6 +135,16 @@ module.exports = {
                 { name: `Total connects:`, value: `${player.totalconnects}`, inline: true}
             )
             await interaction.reply({ embeds: [embed] })
-        }).catch(e => {console.log(e); interaction.reply({ content: `Player doesn't have rank in **${GetServername(server)}**, or invalid SteamID`, ephemeral: true})});
+        }).catch(e => { 
+            switch(config.debug){
+                case 0:
+                    logger.warn(e);
+                    break;
+                case 1:
+                    console.log(e); // log the full error
+                    break;
+            }
+            interaction.reply({ content: `Player doesn't have rank in **${GetServername(server)}**, or invalid SteamID`, ephemeral: true})
+        });
     }
 }
