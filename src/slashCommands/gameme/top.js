@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const { flag } = require('country-emoji');
 const config = require("../../../config");
 const { MessageEmbed } = require('discord.js');
+const logger = require("../../utils/logger");
 const ServersList = [];
 
 for(let i = 0; i < config.servers.length; i++)
@@ -83,6 +84,16 @@ module.exports = {
                 }
             }
             await interaction.reply({ embeds: [embed]})
-        }).catch(e => {console.log(e); interaction.reply({ content: "Page doesn't exist or invalid server!", ephemeral: true})});
+        }).catch(e => {
+            switch(config.debug){
+                case 0:
+                    logger.warn(e);
+                    break;
+                case 1:
+                    console.log(e); // log the full error
+                    break;
+            } 
+            interaction.reply({ content: "Page doesn't exist or invalid server!", ephemeral: true})
+        });
     }
 }
