@@ -23,10 +23,10 @@ module.exports = {
     serverinfo: "/api/serverinfo/",
     playerlist: "/api/playerlist/",
 
-    // format: ["ServerName", "symbol" (!!!!it should be lowercase!!!!), id (it should be an integer, you can get it from your server link, ex: https://wafgamers.gameme.com/css11 , the value here is 11), "ip:port", "type" (css, csgo, tf2 ... etc)]
+    // format: ["ServerName", "symbol" (!!!!it should be lowercase!!!!), "id" (you can get it from your server link, ex: https://wafgamers.gameme.com/css11 , the value here is "11", an other example https://wafgamers.gameme.com/css , here it has no value so it will be ""), "ip:port", "type" (css, csgo, tf2 ... etc)]
     // here is some examples
     servers: [
-        ["Zombie Revival", "zr", 2, "54.36.126.223:27015", "css"],
-        ["Deathmatch", "dm", 3, "54.36.126.223:27019", "css"],
+        ["Zombie Revival", "zr", "2", "54.36.126.223:27015", "css"],
+        ["Deathmatch", "dm", "3", "54.36.126.223:27019", "css"],
     ] 
 };
