@@ -1,4 +1,5 @@
 module.exports = {
+    debug: 0,
     
     // discord bot id
     botID: '',

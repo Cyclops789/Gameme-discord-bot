@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const Converter = require('timestamp-conv');
 const { flag } = require('country-emoji');
 const config = require("../../../config");
+const logger = require("../../utils/logger");
 const Discord = require('discord.js');
 const ServersList = [];
 
@@ -82,6 +83,16 @@ module.exports = {
                 { name: `Players:`, value: `${server.act}(${server.bots})/${server.max}`, inline: true}
             )
             await interaction.reply({ embeds: [embed] })
-        }).catch(e => {console.log(e); interaction.reply({ content: "Server is probably offline!", ephemeral: true})});
+        }).catch(e => {
+            switch(config.debug){
+                case 0:
+                    logger.warn(e);
+                    break;
+                case 1:
+                    console.log(e); // log the full error
+                    break;
+            }
+            interaction.reply({ content: "Server is probably offline!", ephemeral: true})
+        });
     }
 }

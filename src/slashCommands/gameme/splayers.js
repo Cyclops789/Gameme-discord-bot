@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const { flag } = require('country-emoji');
 const config = require("../../../config");
 const Discord = require('discord.js');
+const logger = require("../../utils/logger");
 const ServersList = [];
 
 for(let i = 0; i < config.servers.length; i++)
@@ -84,6 +85,16 @@ module.exports = {
                 embed.addFields({ name: `${player_cflag} - ${player_name}`, value: `**Team:** ${player_team} | **Points:** ${player_skill} | **Kills:** ${player_kill} | **Deaths:** ${player_deaths}`})
             }
             await interaction.reply({ embeds: [embed] })
-        }).catch(e => {console.log(e); interaction.reply({ content: "Server is probably offline!", ephemeral: true})});
+        }).catch(e => {
+            switch(config.debug){
+                case 0:
+                    logger.warn(e);
+                    break;
+                case 1:
+                    console.log(e); // log the full error
+                    break;
+            }
+            interaction.reply({ content: "Server is probably offline!", ephemeral: true})
+        });
     }
 }
