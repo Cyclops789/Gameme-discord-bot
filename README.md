@@ -9,6 +9,7 @@ npm i
 # Adding more servers
 - check [config.js](https://github.com/Cyclops789/Gameme-discord-bot/blob/main/config.example.js) for examples 
 # Build (register (/) commands)
+You should run it when ever you add a new server
 ```
 npm run build
 ```
