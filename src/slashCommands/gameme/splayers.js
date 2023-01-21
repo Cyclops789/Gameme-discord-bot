@@ -60,29 +60,51 @@ module.exports = {
             embed.setTitle(`steam://connect/${server.addr}:${server.port}`)
             
             for(let i = 0, l = server.players.player.length; i < l; i++) {
-                const player_name = server.players.player[i].name
-                const player_kill = server.players.player[i].kills
-                const player_deaths = server.players.player[i].deaths
-                const player_skill = server.players.player[i].skill
-                const player_cc = server.players.player[i].cc
                 
+                const player_rteam  = server.players.player[i].team
+                const player_name   = server.players.player[i].name
+                const player_kill   = server.players.player[i].kills
+                const player_deaths = server.players.player[i].deaths
+                const player_skill  = server.players.player[i].skill
+                const player_cc     = server.players.player[i].cc
+
                 let player_cflag;
-                if(player_cc == "uk"){
-                    player_cflag = ":flag_gb:"
-                } else if (player_cc == 0) {
-                    player_cflag = ":flag_eu:"
-                } else {
-                    player_cflag = flag(player_cc)
-                }
-
                 let player_team;
-                if(server.players.player[i].team == "None"){
-                    player_team = "SPECTATE"
-                } else {
-                    player_team = server.players.player[i].team
+
+                switch(player_cc)
+                {
+                    case "uk":
+                        player_cflag = ":flag_gb:"
+                        break;
+
+                    default:
+                        player_cflag = flag(player_cc) ? flag(player_cc) : ":flag_eu:"
+                        break;
                 }
 
-                embed.addFields({ name: `${player_cflag} - ${player_name}`, value: `**Team:** ${player_team} | **Points:** ${player_skill} | **Kills:** ${player_kill} | **Deaths:** ${player_deaths}`})
+                switch(player_rteam)
+                {
+                    case "None":
+                        player_team = "SPECTATE"
+                        break;
+                    default:
+                        player_team = player_rteam
+                }
+
+                switch(config.countbots)
+                {
+                    case 1:
+                        embed.addFields({ name: `${player_cflag} - ${player_name}`, value: `**Team:** ${player_team} | **Points:** ${player_skill} | **Kills:** ${player_kill} | **Deaths:** ${player_deaths}`});
+                        break;
+                    
+                    case 0:
+                        if(player_skill > 0)
+                        {
+                            embed.addFields({ name: `${player_cflag} - ${player_name}`, value: `**Team:** ${player_team} | **Points:** ${player_skill} | **Kills:** ${player_kill} | **Deaths:** ${player_deaths}`});
+                        }
+                        break;
+                }
+
             }
             await interaction.reply({ embeds: [embed] })
         }).catch(e => {
