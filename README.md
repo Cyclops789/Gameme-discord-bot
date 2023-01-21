@@ -1,5 +1,3 @@
-# Gameme Discord Bot
-![image](https://user-images.githubusercontent.com/70551889/209435116-3e8db47e-71be-4357-81a5-a524a42f593e.png)
 # Available commands
 <details>
 <summary>/help</summary>
