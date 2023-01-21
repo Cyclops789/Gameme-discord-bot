@@ -108,7 +108,7 @@ module.exports = {
                     player_cc_emoji = ":flag_gb:"
                     break;
                 default:
-                    player_cc_emoji = flag(player.cc)
+                    player_cc_emoji = flag(player.cc) ? flag(player.cc) : ":flag_eu:"
                     break;
             }
 
@@ -116,7 +116,7 @@ module.exports = {
             .setColor(config.embedColor)
             .setThumbnail(`${player.avatar}`, true)
             .addFields(
-                { name: `Name:`, value: `[${player.name}](${config.gamemeLink}/playerinfo/${player.id})`},
+                { name: `Name:`, value: `[${player.name}](${config.gamemelink}/playerinfo/${player.id})`},
                 { name: `ID:`, value: `${player.id}`, inline: true},
                 { name: `Country:`, value: `${player_cc_emoji} ${player.cn}`, inline: true},
                 { name: `Clan tag:`, value: `${playerclantag}`},
