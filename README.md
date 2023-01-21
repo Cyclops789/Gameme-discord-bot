@@ -1,12 +1,42 @@
 # Gameme Discord Bot
 ![image](https://user-images.githubusercontent.com/70551889/209435116-3e8db47e-71be-4357-81a5-a524a42f593e.png)
 # Available commands
-- /help
-- /pinfo (Player Info), args: Server, SteamID
-- /servers 
-- /sinfo (Server Info), args: Server
-- /splayers (Server Players), args: Server
-- /top (Top players), args: Server, Page
+<details>
+<summary>/help</summary>
+  
+![help](https://user-images.githubusercontent.com/70551889/213894403-ef562523-5a8c-4d16-9315-ca1d23e83e57.png)
+</details>
+
+<details>
+<summary>/pinfo (Player Info), args: Server, SteamID</summary>
+  
+![pinfo](https://user-images.githubusercontent.com/70551889/213894412-d9713fae-1bc9-426b-93ad-741e2cc5563f.png)
+</details>
+
+<details>
+<summary>/servers</summary>
+  
+![servers](https://user-images.githubusercontent.com/70551889/213894421-621eca47-4e0d-45cf-8ea7-32f8ccb823b8.png)
+</details>
+
+<details>
+<summary>/sinfo (Server Info), args: Server</summary>
+  
+![pinfo](https://user-images.githubusercontent.com/70551889/213894434-c6e421c9-2ac2-4e6f-9896-0690a57e11e2.png)
+</details>
+
+<details>
+<summary>/splayers (Server Players), args: Server</summary>
+  
+![splayers](https://user-images.githubusercontent.com/70551889/213894438-a393564e-b06b-449f-815b-c0fd321cf2ee.png)
+</details>
+
+<details>
+<summary>/top (Top players), args: Server, Page</summary>
+  
+![top](https://user-images.githubusercontent.com/70551889/213894441-15f7f6bd-9dbd-422f-bfd8-8276eaef5b5f.png)
+</details>
+
 # Install
 ```
 npm i
