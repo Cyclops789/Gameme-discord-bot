@@ -24,6 +24,9 @@ module.exports = {
     serverinfo: "/api/serverinfo/",
     playerlist: "/api/playerlist/",
 
+    // count bots as players
+    countbots: 1,
+
     // format: ["ServerName", "symbol" (!!!!it should be lowercase!!!!), "id" (you can get it from your server link, ex: https://wafgamers.gameme.com/css11 , the value here is "11", an other example https://wafgamers.gameme.com/css , here it has no value so it will be ""), "ip:port", "type" (css, csgo, tf2 ... etc)]
     // here is some examples
     servers: [
