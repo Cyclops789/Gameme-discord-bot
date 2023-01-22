@@ -20,7 +20,7 @@
 <details>
 <summary>/sinfo (Server Info), args: Server</summary>
   
-![pinfo](https://user-images.githubusercontent.com/70551889/213894434-c6e421c9-2ac2-4e6f-9896-0690a57e11e2.png)
+![image](https://user-images.githubusercontent.com/70551889/213916029-4ca5a913-1b87-4f7a-a7d8-3eb7a876dfcd.png)
 </details>
 
 <details>
