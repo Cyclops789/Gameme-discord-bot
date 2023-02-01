@@ -65,7 +65,7 @@ module.exports = {
             embed.setColor(config.embedColor)
             embed.setTitle(`Page: ${page}`)
 
-            for(let i = 0, l = playerlist.player.length; i < l; i++) {
+            for(let i = 0, l = playerlist.player.length; i < playerlist.player.length; i++) {
                 
                 const player_name       = playerlist.player[i].name
                 const player_skill      = playerlist.player[i].skill
