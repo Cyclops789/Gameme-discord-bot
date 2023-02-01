@@ -71,7 +71,7 @@ module.exports = {
                 const player_skill      = playerlist.player[i].skill
                 const player_steamid    = playerlist.player[i].uniqueid
                 const player_cc         = playerlist.player[i].cc
-                const count             = i+1
+                const count             = (10 * page) + i - 9
                 
                 let player_cc_emoji;
                 if(player_cc == "uk"){
