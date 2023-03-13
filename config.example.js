@@ -18,7 +18,7 @@ module.exports = {
     // it convert xml to json, credit: "https://github.com/factmaven/xml-to-json" , you can use "https://api.factmaven.com/xml-to-json/?xml=" as well
     apilink: "https://api.wafgamers.fun/xml/?xml=",
 
-    // api paths, dont change anything here!!
+    // api routes, dont change anything here!!
     playerinfo: "/api/playerinfo/",
     serverlist: "/api/serverlist/address/",
     serverinfo: "/api/serverinfo/",
