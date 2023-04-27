@@ -13,10 +13,10 @@ module.exports = {
     embedColor: "black",
 
     // set this to your gameme page, it shouldn't end with /
-    gamemelink: "https://stats.wafgamers.fun",
+    gamemelink: "https://wafg.gameme.com",
 
     // it convert xml to json, credit: "https://github.com/factmaven/xml-to-json" , you can use "https://api.factmaven.com/xml-to-json/?xml=" as well
-    apilink: "https://api.wafgamers.fun/xml/?xml=",
+    apilink: "https://api.wafgamers.com/xml/?xml=",
 
     // api routes, dont change anything here!!
     playerinfo: "/api/playerinfo/",
